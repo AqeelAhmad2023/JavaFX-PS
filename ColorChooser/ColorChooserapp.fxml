@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.shape.Rectangle?>
+
+<GridPane hgap="8.0" prefHeight="210.0" prefWidth="236.0" style="-fx-background-color: LightSlateGray;" vgap="8.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ColorChooser.ColorChooserController">
+    <columnConstraints>
+        <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" />
+        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="84.0" minWidth="79.0" prefWidth="84.0" />
+        <ColumnConstraints hgrow="SOMETIMES" maxWidth="60.0" minWidth="55.0" prefWidth="55.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" />
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" />
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+    </rowConstraints>
+    <children><Label text="Red">
+         <padding>
+            <Insets bottom="14.0" left="14.0" right="14.0" top="14.0" />
+         </padding></Label><Label text="Green" GridPane.rowIndex="1" /><Label text="Blue" GridPane.rowIndex="2" /><Slider fx:id="redSlider" max="255.0" prefHeight="14.0" prefWidth="66.0" GridPane.columnIndex="1" /><Slider fx:id="greenSlider" max="255.0" prefHeight="14.0" prefWidth="71.0" GridPane.columnIndex="1" GridPane.rowIndex="1" /><Slider fx:id="blueSlider" max="255.0" prefHeight="14.0" prefWidth="62.0" GridPane.columnIndex="1" GridPane.rowIndex="2" /><Rectangle fx:id="colorRectangle" arcHeight="5.0" arcWidth="5.0" height="31.0" stroke="WHITE" strokeType="INSIDE" width="178.0" GridPane.columnIndex="1" GridPane.rowIndex="3" GridPane.rowSpan="2147483647">
+        <GridPane.margin>
+            <Insets bottom="32.0" />
+        </GridPane.margin></Rectangle>
+        <TextField fx:id="redTextField" maxWidth="-Infinity" prefHeight="25.0" prefWidth="62.0" style="-fx-border-color: orange;" GridPane.columnIndex="2" />
+        <TextField fx:id="greenTextField" maxWidth="-Infinity" prefHeight="25.0" prefWidth="61.0" style="-fx-border-color: orange;" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+        <TextField fx:id="blueTextField" maxWidth="-Infinity" prefHeight="25.0" prefWidth="60.0" style="-fx-border-color: orange;" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+        <Label fx:id="resultTextField" text="(0,0,0)" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+    </children>
+    <padding>
+        <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
+    </padding>
+</GridPane>
